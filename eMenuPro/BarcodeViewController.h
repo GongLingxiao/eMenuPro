@@ -1,19 +1,19 @@
 //
-//  RootViewController.h
-//  NewProject
+//  BarcodeViewController.h
+//  eMenuPro
 //
-//  Created by 学鸿 张 on 13-11-29.
-//  Copyright (c) 2013年 Steven. All rights reserved.
+//  Created by Gong Lingxiao on 14-2-8.
+//  Copyright (c) 2014年 Gong Lingxiao. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface RootViewController : UIViewController<AVCaptureMetadataOutputObjectsDelegate>
+@interface BarcodeViewController : UIViewController<AVCaptureMetadataOutputObjectsDelegate>
 {
     int num;
     BOOL upOrdown;
-      NSTimer * timer;
+    NSTimer * timer;
 }
 @property (strong,nonatomic)AVCaptureDevice * device;
 @property (strong,nonatomic)AVCaptureDeviceInput * input;

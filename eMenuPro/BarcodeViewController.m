@@ -1,19 +1,18 @@
-
 //
-//  RootViewController.m
-//  NewProject
+//  BarcodeViewController.m
+//  eMenuPro
 //
-//  Created by 学鸿 张 on 13-11-29.
-//  Copyright (c) 2013年 Steven. All rights reserved.
+//  Created by Gong Lingxiao on 14-2-8.
+//  Copyright (c) 2014年 Gong Lingxiao. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "BarcodeViewController.h"
 
-@interface RootViewController ()
+@interface BarcodeViewController ()
 
 @end
 
-@implementation RootViewController
+@implementation BarcodeViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,9 +53,9 @@
     
     timer = [NSTimer scheduledTimerWithTimeInterval:.02 target:self selector:@selector(animation1) userInfo:nil repeats:YES];
     
-   
-
-
+    
+    
+    
 }
 -(void)animation1
 {
@@ -74,7 +73,7 @@
             upOrdown = NO;
         }
     }
-
+    
 }
 -(void)backAction
 {
@@ -121,7 +120,7 @@
     _preview.frame =CGRectMake(20,110,280,280);
     [self.view.layer insertSublayer:self.preview atIndex:0];
     
-
+    
     
     // Start
     [_session startRunning];
@@ -129,7 +128,7 @@
 #pragma mark AVCaptureMetadataOutputObjectsDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
-   
+    
     NSString *stringValue;
     
     if ([metadataObjects count] >0)
@@ -139,11 +138,11 @@
     }
     
     [_session stopRunning];
-   [self dismissViewControllerAnimated:YES completion:^
-    {
-        [timer invalidate];
-        NSLog(@"%@",stringValue);
-    }];
+    [self dismissViewControllerAnimated:YES completion:^
+     {
+         [timer invalidate];
+         NSLog(@"%@",stringValue);
+     }];
 }
 
 - (void)didReceiveMemoryWarning

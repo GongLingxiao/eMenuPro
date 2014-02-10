@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "RootViewController.h"
+#import "BarcodeViewController.h"
 @interface ViewController ()
 
 @end
@@ -37,7 +37,7 @@
 {
     if(IOS7)
     {
-        RootViewController * rt = [[RootViewController alloc]init];
+        BarcodeViewController * rt = [[BarcodeViewController alloc]init];
         [self presentViewController:rt animated:YES completion:^{
             
         }];
