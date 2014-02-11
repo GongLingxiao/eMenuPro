@@ -13,5 +13,10 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
-#define IOS7 [[[UIDevice currentDevice] systemVersion]floatValue] >= 7 
+    #import <CoreLocation/CoreLocation.h>
+    #import <SystemConfiguration/SystemConfiguration.h>
+    #import <MobileCoreServices/MobileCoreServices.h>
+    #import "AFNetworking.h"
+#define WEBSERVICE_ADDRESS @"http://10.1.2.199:8080/"
+#define IOS7 [[[UIDevice currentDevice] systemVersion]floatValue] >= 7
 #endif

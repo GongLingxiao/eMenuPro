@@ -18,5 +18,7 @@
 }
 @property (nonatomic, strong) UIImageView * line;
 
+- (IBAction)buttonTapped:(id)sender;
+
 @end
 

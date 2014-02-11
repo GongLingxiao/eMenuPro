@@ -32,12 +32,14 @@
     [scanButton addTarget:self action:@selector(setupCamera) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:scanButton];
     
+    //NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    //[userDefaults setInteger:myInteger forKey:@"myInteger"];
 }
 -(void)setupCamera
 {
     if(IOS7)
     {
-        BarcodeViewController * rt = [[BarcodeViewController alloc]init];
+        BarcodeViewController *rt = [[BarcodeViewController alloc] init];
         [self presentViewController:rt animated:YES completion:^{
             
         }];
@@ -48,6 +50,28 @@
         [self scanBtnAction];
     }
 }
+- (IBAction)buttonTapped:(id)sender {
+    NSError *error;
+    NSString *weatherUrl = [NSString stringWithFormat:@"%@dishMenu/ws/test", WEBSERVICE_ADDRESS];
+    AFHTTPRequestOperationManager *operationManager = [AFHTTPRequestOperationManager manager];
+    //NSDictionary *params = @{@"id": @"xxx"};
+    [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:weatherUrl parameters:nil error:&error];
+    operationManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    [operationManager POST:weatherUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSError *error;
+        NSDictionary *json = [NSJSONSerialization
+                              JSONObjectWithData:responseObject
+                              options:kNilOptions
+                              error:&error];
+        //NSDictionary *latestLoans = (NSDictionary *) responseObject;
+        //NSLog(@"JSON: %@", [json objectForKey:@"flag"]);
+        NSArray *arr = [json objectForKey:@"rst"];
+        NSLog(@"JSON: %@", [[arr objectAtIndex:0] objectForKey:@"shop"]);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+}
+
 -(void)scanBtnAction
 {
     num = 0;
