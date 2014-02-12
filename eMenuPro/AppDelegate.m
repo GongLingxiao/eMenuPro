@@ -12,7 +12,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    NSString *docsDir;
+    NSArray *dirPaths;
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    docsDir = [dirPaths objectAtIndex:0];
+    // Build the path to the database file
+    self.databasePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent: @"eMenuPro.db"]];
+    NSFileManager *filemgr = [NSFileManager defaultManager];
+    if ([filemgr fileExistsAtPath:self.databasePath] == NO) {
+        
+    }
     return YES;
 }
 							

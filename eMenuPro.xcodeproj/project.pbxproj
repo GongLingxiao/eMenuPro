@@ -55,6 +55,7 @@
 		330715EA18A635830069F8E5 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = 330715E318A635830069F8E5 /* zbar-help.html */; };
 		330715EB18A635830069F8E5 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = 330715E418A635830069F8E5 /* zbar-helpicons.png */; };
 		330715EC18A635830069F8E5 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = 330715E518A635830069F8E5 /* zbar-samples.png */; };
+		3347E97218A9B81200069249 /* SystemUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 3347E97118A9B81200069249 /* SystemUtil.m */; };
 		33CE53B418A638E500652273 /* BarcodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33CE53B318A638E500652273 /* BarcodeViewController.m */; };
 		33CE53B618A639B300652273 /* line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CE53B518A639B300652273 /* line@2x.png */; };
 		33CE53B818A639E800652273 /* pick_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 33CE53B718A639E800652273 /* pick_bg@2x.png */; };
@@ -154,6 +155,8 @@
 		330715E318A635830069F8E5 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
 		330715E418A635830069F8E5 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
 		330715E518A635830069F8E5 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		3347E97018A9B81200069249 /* SystemUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemUtil.h; sourceTree = "<group>"; };
+		3347E97118A9B81200069249 /* SystemUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemUtil.m; sourceTree = "<group>"; };
 		33CE53B218A638E500652273 /* BarcodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeViewController.h; sourceTree = "<group>"; };
 		33CE53B318A638E500652273 /* BarcodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarcodeViewController.m; sourceTree = "<group>"; };
 		33CE53B518A639B300652273 /* line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line@2x.png"; sourceTree = "<group>"; };
@@ -207,6 +210,7 @@
 		3307150218A62A280069F8E5 = {
 			isa = PBXGroup;
 			children = (
+				3347E96F18A9B7E600069249 /* Entity */,
 				3307154318A62A4D0069F8E5 /* Resource */,
 				3307151418A62A280069F8E5 /* Classes */,
 				3307153318A62A280069F8E5 /* eMenuProTests */,
@@ -401,6 +405,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		3347E96F18A9B7E600069249 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				3347E97018A9B81200069249 /* SystemUtil.h */,
+				3347E97118A9B81200069249 /* SystemUtil.m */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
 		33CE53B918A639FE00652273 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -518,6 +531,7 @@
 				3307152518A62A280069F8E5 /* ViewController.m in Sources */,
 				3307155918A62ABD0069F8E5 /* AFHTTPRequestOperationManager.m in Sources */,
 				33CE53B418A638E500652273 /* BarcodeViewController.m in Sources */,
+				3347E97218A9B81200069249 /* SystemUtil.m in Sources */,
 				3307155B18A62ABD0069F8E5 /* AFNetworkReachabilityManager.m in Sources */,
 				3307155F18A62ABD0069F8E5 /* AFURLResponseSerialization.m in Sources */,
 				3307155D18A62ABD0069F8E5 /* AFURLConnectionOperation.m in Sources */,
